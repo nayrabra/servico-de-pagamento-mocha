@@ -69,13 +69,30 @@ Retorna o último pagamento registrado no sistema.
 Instale as dependências:
 
 ```bash
-npm install
+npm init -y
+```
+No arquivo `package.json`, altere:
+
+```json
+"type": "commonjs"
+```
+
+para:
+
+```json
+"type": "module"
+```
+
+Instale o Mocha:
+
+```bash
+npm i mocha
 ```
 
 Execute os testes:
 
 ```bash
-npm test
+npx mocha
 ```
 
 ## Exemplo de Uso
