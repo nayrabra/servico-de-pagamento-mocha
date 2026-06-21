@@ -39,4 +39,12 @@ describe('ServicoDePagamento', () => {
     });
   });
 
+  it('deve retornar undefined quando não houver pagamento', () => {
+    const servico = new ServicoDePagamento();
+
+    const ultimoPagamento = servico.consultarUltimoPagamento();
+
+    assert.strictEqual(ultimoPagamento, undefined);
+  });
+
 });
