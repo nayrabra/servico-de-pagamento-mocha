@@ -8,6 +8,8 @@ Projeto desenvolvido como atividade da disciplina **Programação para Automaç�
 
 Implementar uma classe responsável por realizar e consultar pagamentos, aplicando regras de negócio para categorização dos pagamentos de acordo com o valor informado.
 
+Além disso, implementar uma pipeline de Integração Contínua (CI) utilizando GitHub Actions para automatizar a execução dos testes e a geração de relatórios.
+
 ## Requisitos da Atividade
 
 * Criar uma classe `ServicoDePagamento`;
@@ -18,12 +20,17 @@ Implementar uma classe responsável por realizar e consultar pagamentos, aplican
 
   * `cara` para pagamentos com valor superior a 100,00;
   * `padrão` para pagamentos com valor menor ou igual a 100,00;
-* Desenvolver testes automatizados utilizando **Mocha** e **Node Assert**.
+* Desenvolver testes automatizados utilizando **Mocha** e **Node Assert**;
+* Implementar pipeline de Integração Contínua utilizando GitHub Actions;
+* Gerar e publicar relatórios de execução dos testes.
 
 ## Estrutura do Projeto
 
 ```text
 .
+├── .github
+│    └── workflows
+│        └── ci.yml
 ├── assets
 │   └── tests-passing.png
 ├── src
@@ -41,7 +48,9 @@ Implementar uma classe responsável por realizar e consultar pagamentos, aplican
 * JavaScript (ES Modules)
 * Node.js
 * Mocha
-* Assert
+* Node Assert
+* Mochawesome
+* GitHub Actions
 
 ## Funcionalidades
 
@@ -115,6 +124,39 @@ Saída:
   categoria: 'cara'
 }
 ```
+
+## Pipeline de Integração Contínua
+
+A pipeline foi implementada utilizando GitHub Actions e contempla:
+
+### Execução por Push
+
+A execução ocorre automaticamente sempre que um push é realizado na branch principal (main).
+
+### Execução Manual
+
+A execução pode ser iniciada manualmente através da opção Run workflow disponível na aba Actions do GitHub.
+
+### Execução Agendada
+
+A pipeline possui execução automática diária configurada através do recurso schedule.
+
+schedule:
+  - cron: '15 6 * * *'
+
+### Execução dos Testes
+
+Os testes unitários são executados automaticamente através do comando:
+```
+npm test
+```
+### Geração de Relatório
+
+Os resultados da execução são gerados utilizando o reporter Mochawesome.
+
+### Publicação de Artefatos
+
+Os relatórios são armazenados e disponibilizados como artefatos da execução da pipeline utilizando a action upload-artifact.
 
 ## Autor
 
