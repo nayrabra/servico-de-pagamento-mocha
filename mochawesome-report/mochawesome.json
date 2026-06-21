@@ -5,8 +5,8 @@
     "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2026-06-21T00:41:24.863Z",
-    "end": "2026-06-21T00:41:24.866Z",
+    "start": "2026-06-21T01:03:35.154Z",
+    "end": "2026-06-21T01:03:35.157Z",
     "duration": 3,
     "testsRegistered": 4,
     "passPercent": 100,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "71b26187-78d1-4790-890d-866991f42a43",
+      "uuid": "662936f4-6a75-45a2-af66-b55290cd2033",
       "title": "",
       "fullFile": "/Users/nayrabraga/Desktop/QA-automation/pagamento-mocha/test/servicoDePagamento.test.js",
       "file": "/test/servicoDePagamento.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2ca5f7c8-5dc1-4a05-b70d-fb5e47b5f403",
+          "uuid": "e4f10a6b-6b93-4021-beec-c9e58ab05b78",
           "title": "ServicoDePagamento",
           "fullFile": "/Users/nayrabraga/Desktop/QA-automation/pagamento-mocha/test/servicoDePagamento.test.js",
           "file": "/test/servicoDePagamento.test.js",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const servico = new ServicoDePagamento();\nservico.pagar('0987-7656-3475', 'Samar', 100);\nconst ultimoPagamento = servico.consultarUltimoPagamento();\nassert.strictEqual(ultimoPagamento.categoria, 'padrão');",
               "err": {},
-              "uuid": "dbc97914-1db9-4d23-8ed7-561cf81ddb22",
-              "parentUUID": "2ca5f7c8-5dc1-4a05-b70d-fb5e47b5f403",
+              "uuid": "c05b2769-ea6b-49b8-8c40-bbd2cfc1cd79",
+              "parentUUID": "e4f10a6b-6b93-4021-beec-c9e58ab05b78",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "const servico = new ServicoDePagamento();\nservico.pagar('0123-7666-3413', 'Samar', 100.01);\nconst ultimoPagamento = servico.consultarUltimoPagamento();\nassert.strictEqual(ultimoPagamento.categoria, 'cara');",
               "err": {},
-              "uuid": "e1878ed6-dc73-4fca-846c-a0550d058cd8",
-              "parentUUID": "2ca5f7c8-5dc1-4a05-b70d-fb5e47b5f403",
+              "uuid": "f0329d09-0513-4214-94a9-19ab7e9a5371",
+              "parentUUID": "e4f10a6b-6b93-4021-beec-c9e58ab05b78",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "deve retornar o último pagamento realizado",
               "fullTitle": "ServicoDePagamento deve retornar o último pagamento realizado",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "const servico = new ServicoDePagamento();\nservico.pagar('1111', 'Empresa A', 50);\nservico.pagar('2222', 'Empresa B', 150);\nconst ultimoPagamento = servico.consultarUltimoPagamento();\nassert.deepStrictEqual(ultimoPagamento, {\n  codigoBarras: '2222',\n  empresa: 'Empresa B',\n  valor: 150,\n  categoria: 'cara'\n});",
               "err": {},
-              "uuid": "441c362a-b647-4d11-afe6-465005ce1959",
-              "parentUUID": "2ca5f7c8-5dc1-4a05-b70d-fb5e47b5f403",
+              "uuid": "ea4b88a4-fdef-48fa-81d3-3d34722ebf21",
+              "parentUUID": "e4f10a6b-6b93-4021-beec-c9e58ab05b78",
               "isHook": false,
               "skipped": false
             },
@@ -101,23 +101,23 @@
               "context": null,
               "code": "const servico = new ServicoDePagamento();\nconst ultimoPagamento = servico.consultarUltimoPagamento();\nassert.strictEqual(ultimoPagamento, undefined);",
               "err": {},
-              "uuid": "b7ddc86f-71b6-4421-8029-1bd8168bccf7",
-              "parentUUID": "2ca5f7c8-5dc1-4a05-b70d-fb5e47b5f403",
+              "uuid": "04438fd5-383b-4d6e-8096-10eb37862284",
+              "parentUUID": "e4f10a6b-6b93-4021-beec-c9e58ab05b78",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "dbc97914-1db9-4d23-8ed7-561cf81ddb22",
-            "e1878ed6-dc73-4fca-846c-a0550d058cd8",
-            "441c362a-b647-4d11-afe6-465005ce1959",
-            "b7ddc86f-71b6-4421-8029-1bd8168bccf7"
+            "c05b2769-ea6b-49b8-8c40-bbd2cfc1cd79",
+            "f0329d09-0513-4214-94a9-19ab7e9a5371",
+            "ea4b88a4-fdef-48fa-81d3-3d34722ebf21",
+            "04438fd5-383b-4d6e-8096-10eb37862284"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

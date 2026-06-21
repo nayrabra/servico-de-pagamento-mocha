@@ -1,5 +1,5 @@
 import assert from 'assert';
-import ServicoDePagamento from '../src/ServicoDePagamento.js';
+import ServicoDePagamento from '../src/servicoDePagamento.js';
 
 describe('ServicoDePagamento', () => {
 
